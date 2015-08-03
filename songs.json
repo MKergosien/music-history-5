@@ -1,0 +1,28 @@
+{
+    "songs": [
+
+        {
+            "name": "Smells Like Teen Spirit",
+            "artist": "Nirvana",
+            "album": "Nevermind"
+        },
+
+        {
+            "name": "Hey Jude",
+            "artist": "Beatles",
+            "album": "Hey Jude"
+        },
+
+        {
+            "name": "Crash",
+            "artist": "Dave Matthews Band",
+            "album": "Crash"
+        },
+
+        {
+            "name": "Hotel California",
+            "artist": "Eagles",
+            "album": "Eagles"
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="music.css">
+	<meta charset="utf-8">
+	<title> Music Playground</title>
+</head>
+
+			<!-- Nav Content Area -->
+<body>
+	<div class="flex-container">
+		<header>
+			<nav>
+				<ul>
+					<li><a href="#">View Music</a> <span class="pipe">|</span> </li> 
+					<li><a href="#">Add Music</a> <span class="pipe">|</span> </li>
+					<li><a href="#">Profile</a></li>
+				</ul>
+			</nav>
+		</header>
+
+				<!-- Left Content Area -->
+
+		<div class="left">
+			<section>
+				<form action="#" method="POST">
+					<label for="song_length"><strong> Song length: </strong></label> 
+							<br><br>
+						<input type="range" name="song_length" min="0:00" max="10:00"step="0:01" value="5.00">
+							<br><br>
+					<label for="artist_type"><strong>Artist:</strong></label>
+							<br><br>
+		    			<select class ="fullwidth" id="artist_type" name="artisttype">
+		     				<option value="Nirvana">Nirvana</option>
+		      				<option value="Beatles">Beatles</option>
+		      				<option value="DMB">Dave Matthews</option>
+		    				<option value ="Eagles">Eagles</option>
+		    			</select>	
+		      				<br><br>	
+					<label  for="album_type"><strong>Album:</strong></label>
+							<br><br>
+						<select class ="fullwidth"id="album_type" name="albumtype">
+		     				<option value="mn">Nevermind</option>
+		      				<option value="hj">Hey Jude</option>
+		      				<option value="crash">Crash</option>
+		    				<option value="hc">Hotel california</option>
+		    			</select>
+							<br><br>
+					<label><strong>Genre:</strong></label>
+							<br><br>
+						<table class ="fullwidth">
+							<tr>
+					       		<td><input type="checkbox" name="rock" value="rock-song"> Rock</td>
+					           	<td><input type="checkbox" name="country" value="country-music"> Country</td>
+					        </tr> 
+					        <tr> 	
+					           	<td><input type="checkbox" name="pop" value="pop-music"> Pop</td>
+					           	<td><input type="checkbox" name="jazz" value="jazz-music"> Jazz</td>
+					        </tr>
+					        <tr>   	
+					           	<td><input type="checkbox" name="blues" value="blues-music"> Blues</td>
+					        	<td><input type="checkbox" name="hiphop" value="hiphop-music"> Hip-Hop</td>
+			        	    </tr>
+		        		</table>
+		        		<br><br>
+		        	<div>
+	     				 <input class ="fullwidth myButton" type="submit" value="Filter">
+	   				</div>
+	        	</form>
+	        </section>
+		</div>
+
+				<!-- Right Content Area -->
+
+		<div class="right n-child" id="songs" >
+			<input type="button" id="more" value="more">
+				<!-- <section >
+					<h2>Smells Like Teen Spirit</h2>
+					<h4>Nirvana | Nevermind | Rock </h4>
+				</section>	
+				<section>
+					<h2>Hey Jude</h2>
+					<h4>Beatles| Hey Jude | Rock </h4>
+				</section>
+				<section>		
+					<h2>Crash</h2>
+					<h4>Dave Matthews Band | Crash | Rock </h4>
+				</section>		
+				<section>
+					<h2>Hotel California</h2>
+					<h4>Eagles | Eagles | Rock </h4>
+				</section>	
+			</div>		 -->
+		</div>
+	</div>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src='ajax.js'></script> -->
+	<script data-main="javascript/main"  src="bower_components/requirejs/require.js"></script>
+</body>	
+</html>
