@@ -13,10 +13,11 @@
 
 define(function() {
   return {
-    querySongs: function(callback) {
+    querySongs: function(callbackfunction) {
       $.ajax({ url: "./javascript/songs.json" }).done(function(data) {
-        callback.call(this, data.songs);
+        callbackfunction.call(this, data.songs);
       });
     }
   };
 });
+
