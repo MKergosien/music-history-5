@@ -1,0 +1,125 @@
+.deleteButton {
+  border-radius: 8px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 16px;
+  background: lightGray;
+  padding: 2px 10px 2px 10px;
+  border: solid #969ea3 1px; }
+  .deleteButton :hover {
+    background: slateGrey;
+    text-decoration: none; }
+
+.myButton {
+  -moz-box-shadow: 4px 7px 0px 0px #ada98e;
+  -webkit-box-shadow: 4px 7px 0px 0px #ada98e;
+  box-shadow: 4px 7px 0px 0px #ada98e;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f5ef9b), color-stop(1, #fefac0));
+  background: -moz-linear-gradient(top, #f5ef9b 5%, #fefac0 100%);
+  background: -webkit-linear-gradient(top, #f5ef9b 5%, #fefac0 100%);
+  background: -o-linear-gradient(top, #f5ef9b 5%, #fefac0 100%);
+  background: -ms-linear-gradient(top, #f5ef9b 5%, #fefac0 100%);
+  background: linear-gradient(to bottom, #f5ef9b 5%, #fefac0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5ef9b', endColorstr='#fefac0',GradientType=0);
+  background-color: #f5ef9b;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Trebuchet MS;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 4px 40px;
+  text-decoration: none; }
+
+.myButton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fefac0), color-stop(1, #f5ef9b));
+  background: -moz-linear-gradient(top, #fefac0 5%, #f5ef9b 100%);
+  background: -webkit-linear-gradient(top, #fefac0 5%, #f5ef9b 100%);
+  background: -o-linear-gradient(top, #fefac0 5%, #f5ef9b 100%);
+  background: -ms-linear-gradient(top, #fefac0 5%, #f5ef9b 100%);
+  background: linear-gradient(to bottom, #fefac0 5%, #f5ef9b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefac0', endColorstr='#f5ef9b',GradientType=0);
+  background-color: #fefac0; }
+
+.myButton:active {
+  position: relative;
+  top: 1px; }
+
+.moreButton {
+  border-radius: 8px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 18px;
+  background: slateGray;
+  padding: 5px 15px 5px 15px;
+  border: solid #969ea3 2px;
+  margin: 50px 0 0 0; }
+
+.moreButton:hover {
+  background: lightGray;
+  text-decoration: none; }
+
+.left {
+  background-color: darkGray;
+  border: 2px solid black;
+  padding: 20px 20px 20px 20px;
+  margin: 0 20px 0 40px;
+  box-shadow: 10px 5px 5px black; }
+
+.right {
+  background-color: #FEFAC0;
+  border: 2px black solid;
+  padding: 20px 20px 20px 20px;
+  margin: 0 50px 0 20px;
+  box-shadow: 10px 5px 5px black;
+  text-align: center; }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.fullwidth {
+  width: 90%; }
+
+.range {
+  width: 80%; }
+
+body {
+  background-color: lightGray; }
+
+.navbar-default {
+  margin-top: 20px;
+  background-color: slateGray; }
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  /*Change text color here*/
+  font-size: 20px; }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav {
+  color: #FEFAC0;
+  /*Text hover color on navbar*/ }
+
+.navbar-default .navbar-brand {
+  color: #fff;
+  /*Home text color*/
+  font-size: 40px; }
+
+.navbar-default .navbar-brand:hover {
+  color: #FEFAC0;
+  /*Home hover color*/ }
+
+.dropdown-menu > li > a:hover {
+  color: #262626;
+  background-color: darkGray;
+  /*change color of links in drop down*/ }
+
+.center {
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

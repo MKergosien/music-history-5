@@ -15,7 +15,7 @@ define(function() {
   return {
     querySongs: function(callbackfunction) {
       $.ajax({ url: "./javascript/songs.json" }).done(function(data) {
-        callbackfunction.call(this, data.songs);
+        callbackfunction.call(this, data);
       });
     }
   };

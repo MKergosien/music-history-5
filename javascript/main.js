@@ -1,44 +1,43 @@
 // The main module (i.e. javascripts/main.js) should then use the 
 // return objects from all three dependencies to populate your song list.
 
+requirejs.config({
+  baseUrl: './javascript',
+  paths: {
+    'jquery': '../bower_components/jquery/dist/jquery.min',
+    'hbs': '../bower_components/require-handlebars-plugin/hbs',
+    'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min'
+  },
+  shim: {
+    'bootstrap': ['jquery']
+  }
+});
+
 requirejs(
-    ['dom-access', 'populate-songs', 'get-more-songs'],
-	function(domAccesss, pop, get_more) {
+    ["jquery", "hbs", "bootstrap", 'dom-access', 'populate-songs', 'get-more-songs'],
+	  function($, Handlebars, bootstrap, domAccess, pop, get_more) {
 
 	    pop.querySongs(function(data) {
-	      console.log("data", data);
+        require(
+          ['hbs!../templates/songs'],
+          function(songTemplate){
+            $("#songs").html(songTemplate(data));
+          });  
+      }); 
 
-			for (var i = 0; i < data.length; i++) {
-	        var songName = data[i].name;
-	        var songArtist = data[i].artist;
-	        var songAlbum = data[i].album;
-	        var songsText = '<div class="song-name"><h3>' + songName + "</h3><p>" + songArtist + " | " + songAlbum + "</p><button class='deleteButton'>Delete</button></div>";
-	        $("#more").before(songsText);
-	      	};
-
-	    });
-	    
-	    $("#more").on("click", function() {
-
-		    get_more.querySongs2(function(data) {
-		      console.log("data", data);
-
-		        for (var i = 0; i < data.length; i++) {
-		          var songName = data[i].name;
-		          var songArtist = data[i].artist;
-		          var songAlbum = data[i].album;
-		          var songsText = '<div class="song-name"><h3>' + songName + "</h3><p>" + songArtist + " | " + songAlbum + "</p><button class= 'deleteButton'>Delete</button></div>";
-		          $
-		            ("#more").before(songsText);
-		        };
-
-		    });
-
-	    });
-
-		
-		$(document).on("click", '.deleteButton', function() {
-	        $(this).parent().remove();
-	    });
-
-	});
+    $("#more").click(function(){
+      console.log("you clicked me");
+      get_more.querySongs2(function(data) {
+        console.log(data);
+        require(
+          ['hbs!../templates/songs'],
+          function(songTemplate){
+            $("#songs").append(songTemplate(data));
+          });
+      } );
+    });  
+      
+    $(document).on("click", '.deleteButton', function() {
+        $(this).parent().remove();
+    });    
+  });  
