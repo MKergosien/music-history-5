@@ -14,7 +14,8 @@
 define(function() {
   return {
     querySongs: function(callbackfunction) {
-      $.ajax({ url: "./javascript/songs.json" }).done(function(data) {
+      $.ajax({ url: "https://glaring-torch-7889.firebaseio.com/.json" }).done(function(data) {
+        console.log(data);
         callbackfunction.call(this, data);
       });
     }
