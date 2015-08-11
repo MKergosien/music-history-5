@@ -56,6 +56,7 @@ requirejs(
       newSong.artist = $("#artistName").val();
       newSong.name = $("#songName").val();
       console.log(newSong);
+        // Look here to see if song exist or not in "allSongs".. if not, call ajax (example-line 78)
 
        $.ajax({
         url: "https://glaring-torch-7889.firebaseio.com/songs.json",
